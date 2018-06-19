@@ -1,0 +1,115 @@
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  flex: 0 0 50px;
+  background-color: #C2C2C2;
+}
+main {
+  flex: 1;
+  display: flex;
+  background-color: #606060;
+}
+footer {
+  flex: 0 0 50px;
+  background-color: #C2C2C2;
+}
+.left, .right {
+  flex: 0 2 50px;
+  background-color: #C2C2C2;
+}
+.content {
+  flex: 1 1 300px;
+}
+
+/* hamburger menu*/
+.hamburger {
+  float: right;
+  right: 50px;    
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 0;  
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;  
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: #111;
+}
+
+.hamburger span::before,
+.hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #111;
+  content: "";
+}
+
+.hamburger span::before {
+  top: -6px;
+}
+
+.hamburger span::after {
+  bottom: -6px;
+}
+
+
+/* Hide the toggle checkbox */
+#expand-toggle {
+  display: none;
+}
+
+/* Hide expandable content by default */
+.expandable {
+  visibility: collapse;
+  background: #ddd;
+}
+
+/* Show hidden content when the checkbox is checked */
+#expand-toggle:checked ~ .menu-overlay {
+  visibility: visible;
+}
+
+/* Hide expandable content by default */
+.menu-overlay {
+  visibility: collapse;  
+  top: 0px;
+  width: 100%;
+  height: 100%;    
+  text-align: center;  
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */    
+  z-index: 2;    
+}
+
+/* The navigation links inside the overlay */
+.menu-overlay a {
+  cursor: pointer; 
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */    
+  font-size: 50px;
+  color: white;
+  display: block;
+  text-decoration: none;    
+}
