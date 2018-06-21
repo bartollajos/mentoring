@@ -49,5 +49,6 @@ footer {
     position: absolute;
     top: 50px;
     width: 1240px;
-    height: 400px;
+    padding: 25px;
+    /* min-height: 847px; */
 }

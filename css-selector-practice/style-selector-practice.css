@@ -1,0 +1,35 @@
+/* Olyan elemekre vonatkozik, melyek kerek és gyumolcs classal is rendelkeznek egyaránt pl.: class="kerek gyumolcs" */
+.kerek.gyumolcs {
+  background-color: indianred;
+  width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* Összes gyumolcs class-ú elem, mely a kerek class-ú elem(ek) alatt van bármekkora mélységben */
+.kerek .gyumolcs {
+  background-color: skyblue;
+  width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* Összes gyumolcs class-ú elem, mely a kerek class-ú elem(ek) alatt van közvetlenül az 1. mélységben */
+.kerek > .gyumolcs {    
+  background-color: lightgreen;
+  width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  font-weight: 300;
+}
+/* Összes label elem, mely a gyumolcs class-ú elem(ek) alatt van bármekkora mélységben */
+.gyumolcs label {
+  background-color: yellow;
+  color: black;   
+}
+/* Label elem(ek), ami "gyumolcs" class-ú */
+label.gyumolcs {  
+  background-color: grey;
+  font-weight: bold;  
+}
